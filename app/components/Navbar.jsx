@@ -35,8 +35,8 @@ export default function ComplexNavbar() {
         transition={{ duration: 0.35 }}
         className="z-5 top-0 pt-4 pb-4 duration-500 fixed w-full bg-[#CFDDD0] px-12 md:pl-16 md:pr-0"
       >
-        <nav className="flex flex-row justify-between py-2">
-          <div className="flex flex-row gap-16  text-black">
+        <nav className="flex flex-row justify-between py-2 text-black">
+          <div className="flex flex-row gap-16  ">
             <div className="flex">
               <Link href="/">
                 <h1 className="playfair text-2xl">MELINA</h1>
@@ -71,7 +71,7 @@ export default function ComplexNavbar() {
 
           {/* For Mobile Responsive */}
           <div
-            className="flex lg:hidden text-2xl py-1 text-black"
+            className="flex lg:hidden text-2xl py-1 text-black px-0"
             onClick={() => {
               setOpen(!open);
             }}
@@ -79,8 +79,8 @@ export default function ComplexNavbar() {
             {open ? <IoMdClose /> : <GiHamburgerMenu />}
           </div>
           <div
-            className={`w-full z-[-1] rounded-lg py-4 bg-[#CFDDD0] absolute flex flex-col gap-4 lg:hidden font-semibold ${
-              open ? 'top-18' : 'top-[-490px]'
+            className={`w-full z-[-1] rounded-lg py-4 bg-[#CFDDD0] absolute flex flex-col gap-4 lg:hidden font-semibold px-12 ${
+              open ? 'top-10 left-0' : 'top-[-490px]'
             }`}
           >
             <div className="lg:hidden flex flex-col font-normal mt-10">
